@@ -1,6 +1,4 @@
-# Recipe Book
-
-# Welcome to my online cook book!
+# Welcome to my online Cookbook!
 
 A website for online recipes. Anyone can create an account and sign in to this site to view recipes, and puplish their own recipes that they can edit or delete later on. You can search for recipes by recipe name, meal category, or owner (if you like specific chefs). You can also view your personal details and change your password any time you want.
 
