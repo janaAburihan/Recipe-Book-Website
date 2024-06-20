@@ -1,0 +1,50 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+            <img src="~/images/RecipeLogo.jpg" />
+            </div>
+            <div class="links">
+
+                <a class="bts" asp-controller="User" asp-action="ShowDetails">Show Details</a>
+                <a class="bts" asp-controller="Recipes" asp-action="RecipesList">Recipes List</a>
+                <a class="bts" asp-controller="User" asp-action="Logout">Logout</a>
+
+            </div>
+
+        </nav>
+    </header>
+    <div class="container">
+        <div class="text-center">
+            <h1 class="display-4">
+                Welcome <span class="ww"> @Model.Name </span> to Our Recipe Book!
+            </h1>
+            <p></p>
+        <img src="~/images/food3.jpg" width="60%" height="200px" />
+            <h2 class="search">Search By </h2>
+            <div class="link2">
+                <form method="post" asp-action="Search" asp-controller="Recipes">
+
+                    <input placeholder="Enter Name" name="Name" />
+                    <select class="form-select" style="width:auto; display:inline" name="Category">
+                        <option value="">select a category</option>
+                        @foreach (Category g in ViewBag.Categories)
+                        {
+                            <option value="@g.Name" >@g.Name</option>
+                        }
+                    </select>
+                    <input placeholder="Enter Owner" name="Owner" />
+                    <input type="submit" value="Search" />
+                </form>
+                <br />
+                <a class="add" asp-controller="Recipes" asp-action="Add">Add Recipe</a>
+
+
+            </div>
+        </div>
+
+    </div>

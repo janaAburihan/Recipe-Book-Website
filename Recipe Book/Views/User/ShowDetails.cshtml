@@ -1,0 +1,42 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "User Details";
+   
+}
+
+    <header>
+        <nav class="navbar ">
+            <div class="logo">
+                <img src="~/images/RecipeLogo.jpg" />
+            </div>
+            <div class="links">
+                <a class="bts" asp-controller="User" asp-action="Index">Home page</a>
+
+                <!--<a class="bts" asp-controller="Recipes" asp-action="RecipesList">Recipes List</a>-->
+
+                <a class="bts" asp-controller="User" asp-action="Logout">Log out</a>
+
+            </div>
+
+        </nav>
+    </header>
+    <div class="container">
+        <div class="text-center">
+            <h1 class="display-4">
+                Welcome <span class="ww"> @Model.Name </span>
+            </h1>
+            <p><b> Your Details:</b></p>
+            <div class="links2">
+                <p>Your name is :<span class="ww">@Model.Name</span></p>
+                <p>Your email is: <span class="ww">@Model.Email</span></p>
+                <br />
+                <a class="btss" asp-controller="User" asp-action="UserRecipes">Show Your Recipes</a>
+                <br /><br />
+                <a class="btss" asp-controller="User" asp-action="Change" >Change Your Password</a> 
+            </div>
+        </div>
+
+    </div>
+
+   

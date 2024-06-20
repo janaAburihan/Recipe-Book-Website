@@ -1,0 +1,50 @@
+﻿@model Recipe
+@{
+    string title = ViewBag.Action + " Recipe";
+    ViewData["Title"] = title;
+}
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="~/images/RecipeLogo.jpg" />
+            </div>
+            <div class="links">
+                <a class="bts" asp-controller="User" asp-action="Index">Home page</a>
+            </div>
+
+        </nav>
+    </header>
+    <h2 class="formTitle">@title</h2>
+
+    <form>
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="mb-3 formContainer">
+            <label asp-for="Name" class="form-label lbl">Name</label>
+            <input asp-for="Name" class="form-control" readonly>
+        </div>
+
+    <div class="mb-3 formContainer">
+        <label asp-for="PreparationTime" class="form-label lbl">Preparation Time</label>
+            <input asp-for="PreparationTime" class="form-control" readonly>
+        </div>
+    <div class="mb-3 formContainer">
+            <label asp-for="Category.Name" class="form-label lbl">Category</label>
+            <input asp-for="Category.Name" class="form-control" readonly>
+        </div>
+
+    <div class="mb-3 formContainer">
+            <label asp-for="Ingredients" class="form-label lbl">Ingredients</label>
+            <input asp-for="Ingredients" class="form-control" readonly>
+        </div>
+    <div class="mb-3 formContainer">
+            <label asp-for="Instructions" class="form-label lbl">Instructions</label>
+            <input asp-for="Instructions" class="form-control" readonly>
+        </div>
+    </form>
+<div>
+    <a class="btn btn-primary" asp-controller="Recipes" asp-action="Edit" asp-route-id="@Model.RecipeId">Edit</a>
+    <a class="btn btn-primary" asp-controller="Recipes" asp-action="Delete" asp-route-id="@Model.RecipeId">Delete</a>
+</div>
+    

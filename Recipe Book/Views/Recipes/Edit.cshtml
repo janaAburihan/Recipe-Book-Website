@@ -1,0 +1,63 @@
+﻿@model Recipe
+@{
+    string title = ViewBag.Action + " Recipe";
+    ViewData["Title"] = title;
+}
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="~/images/RecipeLogo.jpg" />
+            </div>
+            <div class="links">
+                <a class="bts" asp-controller="User" asp-action="Index">Home page</a>
+
+                <a class="bts" asp-controller="User" asp-action="Login">Log in</a>
+
+                <a class="bts" asp-controller="Recipes" asp-action="RecipesList">Recipes List</a>
+
+            </div>
+
+        </nav>
+    </header>
+<h2 class="formTitle">@title</h2>
+
+<form asp-action="Edit" method="post" >
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="mb-3 formContainer">
+        <label asp-for="Name" class="form-label lbl">Name</label>
+        <input asp-for="Name" class="form-control" >
+    </div>
+
+    <div class="mb-3 formContainer">
+        <label asp-for="PreparationTime" class="form-label lbl">Preparation Time</label>
+        <input asp-for="PreparationTime" class="form-control">
+    </div>
+    <div class="mb-3 formContainer">
+        <label asp-for="CategoryId" class="form-label lbl">Category</label>
+        <select asp-for="CategoryId" class="form-select">
+            <option value="">select a category</option>
+            @foreach (var g in ViewBag.Categories)
+            {
+                <option value="@g.CategoryId">@g.Name</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3 formContainer">
+        <label asp-for="Ingredients" class="form-label lbl">Ingredients</label>
+        <input asp-for="Ingredients" class="form-control">
+    </div>
+    <div class="mb-3 formContainer">
+        <label asp-for="Instructions" class="form-label lbl">Instructions</label>
+        <input asp-for="Instructions" class="form-control">
+    </div>
+
+    <input type="hidden" asp-for="RecipeId" />
+    <input type="hidden" asp-for="UserId" value="@ViewBag.userID" />
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-controller="User" asp-action="UserRecipes" class="btn btn-primary">Cancel</a>
+</form>
+    

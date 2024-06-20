@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="~/images/RecipeLogo.jpg" />
+        </div>
+        <div class="links">
+            <!--<a class="bts" asp-controller="Home" asp-action="Index">Home page</a>-->
+
+            <a class="bts" asp-controller="User" asp-action="Login">Log in</a>
+
+            <a class="bts" asp-controller="Recipes" asp-action="RecipesList">Recipes List</a>
+
+        </div>
+
+    </nav>
+</header>
+<div class="text-center">
+    <h1 class="display-4"> <span class="ww">Welcome </span>to our Recipe Book </h1>
+    <p></p>
+    <img src="./images/food3.jpg" width="90%" height="400px"/>
+</div>

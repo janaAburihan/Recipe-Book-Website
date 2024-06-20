@@ -1,0 +1,29 @@
+﻿@model User
+@{
+}
+<form asp-action="Signup" method="post" class="loginf">
+    <h1 class="ww">Sign Up</h1>
+    <div class="data">
+        <input asp-for="UserId" type="hidden" />
+
+        <label asp-for="Name" class="labeld"> User Name</label>
+        <br />
+        <input type="text" asp-for="Name" />
+    </div>
+    <div class="data">
+        <label asp-for="Password" class="labeld">Password</label>
+        <br />
+        <input asp-for="Password" type="password" />
+    </div>
+    <div class="data">
+        <label asp-for="Email" class="labeld">Email</label>
+        <br />
+        <input asp-for="Email" type="Email" />
+    </div>
+
+
+
+
+    <button type="submit" class="ss">Submit</button>
+
+</form>

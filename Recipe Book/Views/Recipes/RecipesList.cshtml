@@ -1,0 +1,48 @@
+﻿@model List<Recipe>
+@{
+    ViewData["Title"] = "Recipes List";
+    
+}
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="~/images/RecipeLogo.jpg" />
+            </div>
+            <div class="links">
+                <a class="bts" asp-controller="User" asp-action="Index">Home page</a>
+            </div>
+
+        </nav>
+    </header>
+    <div class="container">
+        <table class="carTable table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Recipe Name</th>
+                    <th>Preparation Time</th>
+                    <th>Category</th>
+                    <th>Owner</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var recipe in Model)
+                {
+                    <tr>
+                        <td>@recipe.Name</td>
+                        <td>@recipe.PreparationTime</td>
+                        <td>@recipe.Category.Name</td>
+                        <td>@recipe.User.Name</td>
+                        <td>
+                            <a asp-controller="Recipes" asp-action="View"
+                               asp-route-id="@recipe.RecipeId">View</a>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+   

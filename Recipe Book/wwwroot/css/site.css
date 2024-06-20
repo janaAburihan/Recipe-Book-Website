@@ -1,0 +1,186 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.bts {
+    font-size: 15px;
+    font-weight: 900;
+    margin-right: 50px;
+    width: 100px;
+}
+
+.links .bts {
+    text-decoration: none;
+    color: black;
+}
+
+
+.links2 .btss, .add {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(255, 0, 0, 0.55);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight:bold;
+}
+
+.navbar {
+    margin: auto;
+    border-bottom: solid 1px #dee2e6;
+}
+
+.links {
+    #width: 50%;
+    display: flex;
+    justify-content: right;
+    margin-top: 0px;
+}
+
+.logo {
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    margin-left: 100px;
+}
+
+.bts:hover {
+    background-color: rgb(255, 0, 0, 0.55);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.logo img {
+    width: 200px;
+    height: 70px
+}
+
+.display-4 {
+    font-weight: 500;
+    margin-top: 100px;
+}
+
+.formTitle{
+    text-align: left;
+}
+
+.ww {
+    color: red;
+}
+
+.container {
+    text-align: center;
+}
+.formContainer {
+    text-align: left;
+}
+.lbl{
+    font-weight: bold
+}
+
+.loginf {
+    border: 3px solid black;
+    width: fit-content;
+    padding: 70px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.data {
+    margin: 10px;
+    margin-top: 30px;
+}
+
+.labeld {
+    font: 20px;
+    margin-bottom: 10px;
+    margin-left: -100px;
+    font-weight: 500;
+}
+
+.ss {
+    margin-top: 30px;
+    border-radius: 6px;
+    border-color: rgb(255, 0, 0, 0.75);
+    padding: 7px;
+    width: 100px;
+    background-color: rgb(255, 0, 0, 0.75);
+    font-weight: 900;
+}
+
+.recipeTable {
+    margin: 60px;
+}
+
+.link2 .aa {
+    text-decoration: none;
+    color: black;
+}
+
+.link2 {
+    margin-top: 20px;
+}
+
+.search {
+    margin: auto;
+    margin-top: 30px;
+}
+
+.change {
+    text-decoration: none;
+    color: black;
+}
+
+.form {
+    display: flex;
+    justify-content: left;
+}
+
+footer {
+    margin-top: 300px;
+}
+
+.btt {
+    margin-right: 20px;
+}
+
+.fofo {
+    margin-top: 500px;
+}
+
+.contant {
+    margin-top: 100px;
+}
+
+.bb {
+    text-decoration: none;
+    color: black;
+    margin-top: 100px;
+    font-weight: 900;
+}
+
+    .bb:hover {
+        color: black;
+        background-color: rgb(255, 0, 0, 0.55);
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 10px;
+    }
